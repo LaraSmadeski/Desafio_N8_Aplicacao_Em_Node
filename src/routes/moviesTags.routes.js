@@ -4,8 +4,8 @@ const MoviesTagsController = require("../controllers/MoviesTagsController");
 
 const moviesTagsRoutes = Router();
 
-const moviesTagsController = new MoviesTagsController;
+const moviesTagsController = new MoviesTagsController();
 
-moviesTagsRoutes.post("/:user_id", moviesTagsController.create);
+moviesTagsRoutes.get("/:user_id", moviesTagsController.index);
 
 module.exports = moviesTagsRoutes;
