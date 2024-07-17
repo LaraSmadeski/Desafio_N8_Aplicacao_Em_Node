@@ -1,12 +1,13 @@
-exports.up =  knex => knex.schema.createTable("moviesNotes", table => {
+exports.up = knex => knex.schema.createTable("notes", table => {
     table.increments("id");
     table.text("title");
     table.text("description");
     table.integer("rating");
+    table.check("rating BETWEEN 1 AND 5");
     table.integer("user_id").references("id").inTable("users");
 
     table.timestamp("created_at").default(knex.fn.now());
     table.timestamp("updated_at").default(knex.fn.now());
 });
 
-exports.down =  knex => knex.schema.dropTable("moviesNotes");
+exports.down = knex => knex.schema.dropTable("notes");

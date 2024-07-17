@@ -1,7 +1,7 @@
 {
   "name": "desafio_n8_aplicacao_em_node",
   "version": "1.0.0",
-  "description": "Desafio de criação de uma API no Explore da Rocketseat",
+  "description": "API desenvolvida no desafio do curso explorer da Rocketseat.",
   "main": "index.js",
   "scripts": {
     "start": "node ./src/server.js",
@@ -19,6 +19,6 @@
     "sqlite3": "^5.1.7"
   },
   "devDependencies": {
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.4"
   }
 }
